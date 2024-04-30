@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(249, 247, 254);
+  background-color: rgb(141, 157, 141);
   font-family: "Titillium Web", sans-serif;
 }
 .weather-app {
@@ -15,21 +15,23 @@ header {
   border-bottom: 1px solid rgb(249, 247, 254);
 }
 .search-form-input {
-  background-color: rgb(249, 247, 254);
+  background-color: rgb(231, 234, 231);
   border: none;
   border-radius: 6px;
   width: 80%;
   padding: 15px 20px;
   font-size: 16px;
+  color: rgb(67, 93, 68);
 }
 .search-form-button {
-  background-color: #885df1;
+  background-color: rgb(67, 93, 68);
   color: white;
   border: none;
   width: 18%;
   border-radius: 6px;
   padding: 15px 30px;
   font-size: 16px;
+  font-weight: bold;
   margin-left: 5px;
 }
 main {
@@ -39,6 +41,7 @@ main {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  color: rgb(67, 93, 68);
 }
 .weather-app-data {
   display: flex;
@@ -47,12 +50,12 @@ main {
 .weather-app-details {
   font-size: 16px;
   line-height: 24px;
-  color: rgba(39, 33, 66, 0.4);
+  opacity: 0.75;
   font-weight: 500;
 }
 
 .weather-app-details strong {
-  color: rgb(246, 82, 130);
+  color: rgb(67, 93, 68);
 }
 .weather-app-temperature-container {
   display: flex;
@@ -72,23 +75,22 @@ main {
   margin-top: 10px;
 }
 a {
-  color: #885df1;
+  color: rgb(67, 93, 68);
 }
-.weather-.forecast {
+.weather-forecast {
   margin-top: 20px;
   text-align: center;
 }
 .weather-forecast-date {
   font-size: 17px;
+  opacity: 0.75;
 }
-.weather-forecast-temperature {
-  font-size: 15px;
-}
-.weather-forecast-max {
-  opacity: 0.8;
+.weather-forecast-temperatures {
+  font-size: 156x;
+  color: rgb(67, 93, 68);
 }
 .weather-forecast-min {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 footer {
   padding: 20px 0 0 0;

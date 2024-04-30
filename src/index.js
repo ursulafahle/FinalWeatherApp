@@ -30,10 +30,10 @@ function formatDate(date) {
     "Sunday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  return `${day} ${hours}:${minutes}`;
 }
 function searchCity(city) {
   let apiKey = "14600o81bf492c92cb64c3ab43ad1f9t";
@@ -46,7 +46,30 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
+
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="weather-forecast">
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">☀️</div>
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-max">15° </span>
+              <span class="weather-forecast-min">12° </span>
+            </div>
+          </div>
+        </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Münster");
+displayForecast();
