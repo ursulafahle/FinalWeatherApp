@@ -50,7 +50,7 @@ function handleSearchSubmit(event) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[date.getDate()];
+  return days[date.getDay()];
 }
 function getForecast(city) {
   let apiKey = "14600o81bf492c92cb64c3ab43ad1f9t";
@@ -81,7 +81,9 @@ function displayForecast(response) {
               )}°</span>
             </div>
           </div>
-        </div>`;
+        </div>
+         </div>
+         `;
     }
   });
   let forecastElement = document.querySelector("#forecast");
